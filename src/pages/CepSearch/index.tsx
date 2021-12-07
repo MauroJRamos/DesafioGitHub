@@ -5,7 +5,7 @@ import { useState } from 'react';
 import axios from 'axios';
 
 type FormData = {
-  cep: string;
+  git: string;
 };
 
 type Address = {
@@ -13,14 +13,14 @@ type Address = {
   location: string;
   followers: string;
   avatar_url: string;
-  url:string;
+  url: string;
 };
 
-const CepSearch = () => {
+const GitSearch = () => {
   const [address, setAddress] = useState<Address>();
 
   const [formData, setFormData] = useState<FormData>({
-    cep: '',
+    git: '',
   });
 
   const handlehChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -33,7 +33,7 @@ const CepSearch = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     axios
-      .get(`https://api.github.com/users/${formData.cep}`)
+      .get(`https://api.github.com/users/${formData.git}`)
       .then((response) => {
         setAddress(response.data);
         console.log(response.data);
@@ -46,32 +46,33 @@ const CepSearch = () => {
 
   return (
     <div className=" container-master">
-      <div className="cep-search-container">
+      <div className="git-search-container">
         <div className="container search-container">
           <h1 className="">Encontre um perfil GitHub</h1>
           <form onSubmit={handleSubmit}>
             <div className="form-container">
               <input
                 type="text"
-                name="cep"
-                value={formData.cep}
+                name="git"
+                value={formData.git}
                 className="search-input"
-                placeholder="CEP (somente números)"
+                placeholder="  Usuário GitHub"
                 onChange={handlehChange}
               />
 
               <button type="submit" className="btn btn-primary search-button">
-                Buscar
+                Encontar
               </button>
             </div>
           </form>
         </div>
       </div>
-      <div className="container card-container ">
+      <div className=" card-container ">
         {address && (
-          <div className="card-container-result">
-            <div>
-            <ResultCard title="perfil:" description={address.url} />
+          <div className="container card-container-result">
+            <div className="container-result-card-input">
+              <label htmlFor="Inforões" className="card-label">Informações</label>
+              <ResultCard title="perfil:" description={address.url} />
               <ResultCard title="seguidores:" description={address.followers} />
               <ResultCard title="Localidade:" description={address.location} />
               <ResultCard title="nome:" description={address.name} />
@@ -86,4 +87,4 @@ const CepSearch = () => {
   );
 };
 
-export default CepSearch;
+export default GitSearch;

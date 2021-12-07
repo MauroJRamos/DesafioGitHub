@@ -8,7 +8,7 @@ type Props = {
 const ResultCard = ( { title, description} : Props) => {
 
     return (
-        <div className="result-container">
+        <div className="form result-container">
             <h3 className="result-title">{title}</h3>
             <p className="result-description">{description}</p>
         </div>

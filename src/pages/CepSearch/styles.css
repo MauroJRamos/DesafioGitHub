@@ -1,15 +1,9 @@
-.cep-search-container {
+.git-search-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 20px;
   margin-bottom: 30px;
-}
-
-.cep-search-container h1 {
-  font-weight: bold;
-  text-align: center;
-  margin: 50px 0;
 }
 
 .container-master {
@@ -21,7 +15,6 @@
 .card-container {
   margin: 0px;
   justify-content: center;
-  text-align: center;
 }
 
 .card-container-result {
@@ -29,15 +22,38 @@
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
-  margin: 0px 250px;
-  width: 900px;
-  height: 270px;
+  width: 1200px;
+  height: 320px;
   padding-top: 40px;
 }
 
+.container-result-card-input {
+  width: 902px;
+  height: 247px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 8px 15px 17px 14px;
+  align-items: flex-start;
+}
+
+.card-label {
+  color: #1890ff;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  width: 534px;
+  height: 28px;
+  text-align: left;
+  margin-bottom: 14px;
+}
+
 .img-profile {
-  width: 200px;
-  height: 200px;
+  width: 240px;
+  height: 247px;
   margin-right: 10px;
 }
 
@@ -45,20 +61,26 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 900px;
+  width: 1200px;
   height: 270px;
   background-color: #e6f7ff;
   border-radius: 5px;
+  padding-left: 31px;
 }
+
 .search-container h1 {
   color: #262626;
   size: 40px;
   width: 502px;
+  font-style: bold;
+  size: 38px;
+  margin-top: 54px;
 }
+
 .form-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .search-input {
@@ -66,6 +88,9 @@
   border: 1px solid #d9d9d9;
   box-sizing: border-box;
   border-radius: 4px;
+  width: 298px0;
+  height: 40px;
+  margin-top: 12px;
 }
 
 .search-input::placeholder {
@@ -74,13 +99,26 @@
 
 .search-button {
   height: 40px;
-  width: 160px;
+  width: 101px;
   margin-bottom: 35px;
   color: #fff;
+  background: #1890ff;
+  border-radius: 4px;
+  margin-top: 20px;
 }
 
 @media (min-width: 576px) {
   .search-input {
-    width: 480px;
+    width: 298px;
+  }
+
+  
+}
+
+@media (min-width: 992px) {
+  .container-result-card-input {
+
+  width: 902px;
+
   }
 }

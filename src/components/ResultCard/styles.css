@@ -1,12 +1,15 @@
 .result-container {
-    background-color: #fff;
-    width: 600px;
-    border-radius: 5px;
+    background-color: #FFFFFF;
+     
+    height: 40px;
     padding: 10px;
     display: flex;
     gap: 10px;
     align-items: center;
     margin-bottom: 05px;
+    border: 1px solid #D9D9D9;
+    box-sizing: border-box;
+    border-radius: 4px;
     
     
 }
