@@ -7,3 +7,7 @@ Construa um pequeno app conforme design abaixo, que disponibilize um formulário
 ## Design Figma:
 (https://www.figma.com/file/YhRCC5Ly0tWOcxwxjheTJ3/desafio-github-api)
 
+## End point da API Github:
+(https://api.github.com/users/acenelio
+)
+
